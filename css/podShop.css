@@ -677,6 +677,10 @@
         top: -3px;
         padding: 2px 6px;
     }
+    .header-nav__bought {
+        width: 275px;
+        top: 35px;
+    }
     .header__sign {
         margin-left: 8px;
     }
@@ -737,7 +741,7 @@
         border-width: 0 19.5px 15px;
     }
     .content-product__img {
-        height: auto;
+        height: 166.56px;
     }
     .footer .row {
         flex-direction: column;
