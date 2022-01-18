@@ -67,6 +67,7 @@ a {
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 .btn {
@@ -129,5 +130,25 @@ img {
     }
     to {
         opacity: 1;
+    }
+}
+
+@keyframes turnRight {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes turnLeft {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
     }
 }

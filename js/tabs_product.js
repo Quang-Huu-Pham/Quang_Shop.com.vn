@@ -22,3 +22,14 @@ function scrollFunction() {
         document.getElementById("up-top").style.display = "none";
     }
 }
+
+var navMobie = document.getElementById("js-nav-mobie");
+
+function openNavMobie() {
+    navMobie.style.display = "block";
+}
+
+function closeNavMobie() {
+    navMobie.style.display = "none";
+    // navMobie.style.animation ="turnLeft 1s ease";
+}
