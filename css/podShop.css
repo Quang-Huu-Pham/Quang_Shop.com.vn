@@ -2,6 +2,8 @@
     --gap: 10px;
     --primary-color: #1fabec;
     --secondary-color: #fec530;
+    --white-color: #fff;
+    --gray-color: #ccc;
 }
 
 .header {
@@ -27,7 +29,7 @@
     position: absolute;
     top: 5px;
     left: -5px;
-    background-color: rgb(255, 203, 60);
+    background-color: var(--secondary-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -46,15 +48,24 @@
 }
 
 .header__search {
+    position: relative;
     display: flex;
 }
 
 .header__search-input {
     padding: 10px;
     outline: none;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray-color);
     width: 100%;
     font-size: 14px;
+    border-radius: 3px;
+}
+
+.header__search .btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
 }
 
 .header__nav {
@@ -198,7 +209,7 @@
 .slider__product {
     position: relative;
     margin-left: 20px;
-    background-color: #fff;
+    background-color: var(--white-color);
     padding-bottom: 8px;
     overflow: hidden;
     border-radius: 5px;
@@ -209,9 +220,14 @@
     height: 100%;
 }
 
-.slider__product-img {
-    object-fit: cover;
+.slider__product-heading {
     margin-bottom: 12px;
+    max-width: 308px;
+    max-height: 308px;
+    overflow: hidden;
+}
+
+.slider__product-img {
     transition: all 0.25s ease;
 }
 
@@ -227,11 +243,11 @@
     max-width: 50px;
     text-align: center;
     font-weight: 400;
-    color: #fff;
+    color: var(--white-color);
     padding: 4px 0;
     line-height: 15px;
     font-size: 1.6rem;
-    background-color: rgb(255, 209, 58, 0.884);
+    background-color: var(--secondary-color);
 }
 
 .slider__product-sale span {
@@ -247,7 +263,7 @@
     left: 0;
     bottom: -15px;
     position: absolute;
-    border-color: transparent rgba(255, 209, 58, 0.884);
+    border-color: transparent var(--secondary-color);
     border-style: solid;
     border-width: 0 25.6px 15px;
 }
@@ -297,7 +313,7 @@
     line-height: 16px;
     text-align: center;
     background-color: var(--secondary-color);
-    color: #fff;
+    color: var(--white-color);
     box-shadow: 5px 0 20px rgba(0, 0, 0, 0.25);
     z-index: 1;
     transition: all 0.25s ease-in;
@@ -412,7 +428,7 @@
 
 .content-product__item {
     position: relative;
-    background-color: #fff;
+    background-color: var(--white-color);
     border-radius: 8px;
     box-shadow: 0 0 16px rgb(0 0 0 / 10%);
     transition: all 0.25s ease-in;
@@ -469,7 +485,7 @@
     text-align: center;
     padding: 40% 0;
     border-radius: 8px;
-    color: #fff;
+    color: var(--white-color);
     font-size: 1.8rem;
     text-shadow: 0 0 2px red;
     cursor: default;
@@ -517,7 +533,7 @@
 .footer__ncp {
     background-color: #333;
     text-align: center;
-    color: #fff;
+    color: var(--white-color);
     font-size: 1.2rem;
     padding: 8px 0;
 }
@@ -529,7 +545,7 @@
     border-radius: 50%;
     text-align: center;
     font-size: 5rem;
-    color: #fff;
+    color: var(--white-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.25s ease;
 }
@@ -538,6 +554,7 @@
     display: none;
     right: 20px;
     background-color: var(--primary-color);
+    animation: fadeEffect 0.5s ease;
 }
 
 .box-mess {
@@ -553,7 +570,7 @@
     left: 0;
     line-height: 12px;
     background-color: #1a1a1a;
-    color: #fff;
+    color: var(--white-color);
     font-size: 1.6rem;
     padding: 8px 4px;
     border-radius: 0 5px 5px 0;
@@ -592,7 +609,7 @@
     top: 5px;
     right: 10px;
     padding: 10px;
-    color: #fff;
+    color: var(--white-color);
     font-size: 2rem;
     cursor: pointer;
 }
@@ -610,13 +627,13 @@
 }
 
 .nav-mobie__item:hover .nav-mobie__link {
-    color: #fff;
+    color: var(--white-color);
     background-color: #303234;
 }
 
 .nav-mobie__link {
     font-size: 1.6rem;
-    color: #ccc;
+    color: var(--gray-color);
     display: block;
 }
 
@@ -655,11 +672,14 @@
         font-size: 16px;
         padding: 4px 8px;
     }
+    .btn--rounded {
+        border-radius: 20px;
+    }
     .header__name {
         font-size: 1.8rem;
         text-decoration: underline;
         color: #000013;
-        line-height: 25px;
+        line-height: 30px;
     }
     .header__name::after {
         top: 0;
@@ -671,6 +691,7 @@
     }
     .header__search-input {
         padding: 6px 10px;
+        border-radius: 20px;
     }
     .content-nav,
     .header__sign-link,

@@ -14,17 +14,19 @@ function openProduct(evt, product) {
 
 // event scroll
 window.onscroll = function() { scrollFunction() };
+var upTop = document.getElementById("up-top");
 
 function scrollFunction() {
     if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
-        document.getElementById("up-top").style.display = "block";
+        upTop.style.display = "block";
     } else {
-        document.getElementById("up-top").style.display = "none";
+        upTop.style.display = "none";
     }
 }
 
 // navigation bobie
-var navMobie = document.getElementById("js-nav-mobie");
+var navMobie = document.querySelector(".nav-mobie");
+var navMobieContainer = document.querySelector(".nav-mobie__list");
 
 function openNavMobie() {
     navMobie.style.display = "block";
@@ -34,3 +36,7 @@ function closeNavMobie() {
     navMobie.style.display = "none";
     // navMobie.style.animation ="turnLeft 1s ease";
 }
+
+navMobieContainer.addEventListener('click', function(event) {
+    event.stopPropagation();
+})

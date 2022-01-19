@@ -77,7 +77,7 @@ hr {
 }
 
 .btn {
-    padding: 8px;
+    padding: 6px 8px;
     outline: none;
     border: none;
     background-color: #fff;
@@ -92,10 +92,6 @@ hr {
 
 .tx-white {
     color: #fff;
-}
-
-.btn--rounded {
-    border-radius: 5px;
 }
 
 .btn--primary {
