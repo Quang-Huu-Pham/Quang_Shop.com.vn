@@ -23,6 +23,7 @@ function scrollFunction() {
     }
 }
 
+// navigation bobie
 var navMobie = document.getElementById("js-nav-mobie");
 
 function openNavMobie() {
