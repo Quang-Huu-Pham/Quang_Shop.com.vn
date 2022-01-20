@@ -24,6 +24,17 @@ function scrollFunction() {
     }
 }
 
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+        document.querySelector(".header").style.top = "0";
+    } else {
+        document.querySelector(".header").style.top = "-100px";
+    }
+    prevScrollpos = currentScrollPos;
+}
+
 // navigation bobie
 var navMobie = document.querySelector(".nav-mobie");
 var navMobieContainer = document.querySelector(".nav-mobie__list");
@@ -39,4 +50,4 @@ function closeNavMobie() {
 
 navMobieContainer.addEventListener('click', function(event) {
     event.stopPropagation();
-})
+});
