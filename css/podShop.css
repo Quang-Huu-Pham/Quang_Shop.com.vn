@@ -542,7 +542,6 @@
     position: fixed;
     bottom: 20px;
     border-radius: 50%;
-    text-align: center;
     font-size: 5rem;
     color: var(--white-color);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -554,13 +553,7 @@
     right: 20px;
     background-color: var(--primary-color);
     animation: fadeEffect 0.5s ease;
-}
-
-.box-mess {
-    width: 50px;
-    height: 50px;
-    left: 20px;
-    z-index: 4;
+    text-align: center;
 }
 
 .filter {
@@ -647,6 +640,43 @@
     text-align: center;
 }
 
+.box-mess {
+    width: 50px;
+    height: 50px;
+    left: 20px;
+    z-index: 4;
+}
+
+.box-mess__container {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    width: 328px;
+    height: 455px;
+    background-color: var(--fa-color);
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.box-mess__header {
+    background-color: #fff;
+    display: block;
+    height: 30px;
+}
+
+.box-mess__name {
+    font-size: 1.4rem;
+    color: var(--dark-color);
+    display: inline-block;
+    font-weight: 500;
+}
+
+.box-mess__close {
+    float: right;
+    color: var(--primary-color);
+    font-size: 1.6rem;
+}
+
 @media (min-width: 1023px) {
     .nav-mobie {
         display: none;
@@ -682,7 +712,7 @@
         line-height: 30px;
     }
     .header__name::after {
-        top: 0;
+        top: 2px;
         width: 25px;
         height: 25px;
     }

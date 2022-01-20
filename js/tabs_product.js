@@ -12,27 +12,22 @@ function openProduct(evt, product) {
     evt.currentTarget.className += " active";
 }
 
-// event scroll
-window.onscroll = function() { scrollFunction() };
+// // event scroll
 var upTop = document.getElementById("up-top");
-
-function scrollFunction() {
-    if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
-        upTop.style.display = "block";
-    } else {
-        upTop.style.display = "none";
-    }
-}
-
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         document.querySelector(".header").style.top = "0";
     } else {
-        document.querySelector(".header").style.top = "-100px";
+        document.querySelector(".header").style.top = "-90px";
     }
     prevScrollpos = currentScrollPos;
+    if (document.body.scrollTop > 180 || document.documentElement.scrollTop > 180) {
+        upTop.style.display = "block";
+    } else {
+        upTop.style.display = "none";
+    }
 }
 
 // navigation bobie
