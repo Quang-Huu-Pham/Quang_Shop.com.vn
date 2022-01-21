@@ -30,7 +30,7 @@ window.onscroll = function() {
     }
 }
 
-// navigation bobie
+// navigation mobie
 var navMobie = document.querySelector(".nav-mobie");
 var navMobieContainer = document.querySelector(".nav-mobie__list");
 
@@ -46,3 +46,22 @@ function closeNavMobie() {
 navMobieContainer.addEventListener('click', function(event) {
     event.stopPropagation();
 });
+
+// chat mess
+var btnChat = document.querySelector(".box-mess");
+var modalMessage = document.querySelector(".modal-mess");
+var closeMessage = document.querySelector(".modal-mess__close");
+var btnChatMobie = document.querySelector(".chat--mobie");
+
+btnChat.addEventListener('click', function() {
+    modalMessage.style.display = 'block';
+});
+
+closeMessage.addEventListener('click', function() {
+    modalMessage.style.display = 'none';
+});
+
+btnChatMobie.addEventListener('click', function() {
+    modalMessage.style.display = 'block';
+    navMobie.style.display = 'none';
+})

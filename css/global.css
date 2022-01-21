@@ -99,6 +99,19 @@ hr {
     color: #fff;
 }
 
+.input {
+    padding: 10px;
+    outline: none;
+    border: 1px solid var(--gray-color);
+    width: 100%;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+.input--rounded {
+    border-radius: 20px;
+}
+
 .see--more {
     float: right;
     line-height: 48px;
