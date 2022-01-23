@@ -92,11 +92,11 @@
     color: var(--white-color);
 }
 
-.btn--cart:hover .header-nav__bought {
+.btn--cart:hover .header-cart__bought {
     display: block;
 }
 
-.header-nav__quantity {
+.header-cart__quantity {
     position: absolute;
     top: 6px;
     right: 0;
@@ -108,23 +108,30 @@
     text-align: center;
 }
 
-.header-nav__bought {
+.header-cart__bought {
     display: none;
     position: absolute;
     top: 52px;
     right: 0;
-    width: 320px;
-    min-height: 350px;
+    width: 350px;
+    max-height: 350px;
     background-color: var(--fa-color);
-    color: var(--dark-color);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 10px;
     cursor: default;
-    transition: all 1s ease;
+    transition: all 0.5s linear;
 }
 
-.header-nav__bought::before {
+.header-cart__bought--hollow {
+    padding: 10px;
+}
+
+.header-cart__bought--hollow .header-cart__img--hollow,
+.header-cart__bought--hollow .header-cart__msg--hollow {
+    display: block;
+}
+
+.header-cart__bought::before {
     content: "";
     position: absolute;
     top: -20px;
@@ -133,8 +140,13 @@
     border-color: transparent transparent var(--fa-color) transparent;
 }
 
-.header-nav__desc {
-    opacity: 0.8;
+.header-cart__img--hollow {
+    display: none;
+}
+
+.header-cart__msg--hollow {
+    display: none;
+    color: var(--dark-color);
     font-size: 1.6rem;
 }
 
@@ -164,8 +176,10 @@
 }
 
 .banner {
-    margin-top: 100px;
-    padding: 10px 0;
+    margin-top: 85px;
+    background-color: #ffdc69;
+    padding-top: 10px;
+    border-radius: 0 0 100px 100px;
 }
 
 .intro__img {
@@ -350,11 +364,13 @@
 
 .content-nav {
     min-width: 250px;
+    background-color: #fff;
+    box-shadow: 15px 0 10px -12px rgba(0, 0, 0, 0.5);
 }
 
 .content-nav__list li.active {
     background-image: linear-gradient(-120deg, #ffd344 0%, #ff7b56 100%);
-    font-weight: bold;
+    font-weight: 500;
     transition: all 0.25s ease;
 }
 
@@ -371,6 +387,7 @@
     padding: 10px;
     font-size: 1.6rem;
     margin-bottom: 8px;
+    border-radius: 20px 0 0 20px;
     transition: all 0.25s linear;
 }
 
@@ -536,8 +553,6 @@
     border-radius: 50%;
     font-size: 5rem;
     color: var(--white-color);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: all 0.25s ease;
 }
 
 #up-top {
@@ -546,6 +561,8 @@
     background-color: var(--primary-color);
     animation: fadeEffect 0.5s ease;
     text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.25s ease;
 }
 
 .filter {

@@ -37,10 +37,11 @@
 
                 <button class="btn btn--cart">
                     <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-                    <span class="header-nav__quantity">0</span>
-                    <div class="header-nav__bought">
-                        <img src="./img/bought.webp" alt="">
-                        <p class="header-nav__desc">Chưa có sản phẩm</p>
+                    <span class="header-cart__quantity">0</span>
+                    <!-- no products: header-cart__bought--hollow -->
+                    <div class="header-cart__bought header-cart__bought--hollow">
+                        <img class="header-cart__img--hollow" src="https://cdn.dribbble.com/users/9132195/screenshots/17323821/media/686a638b3493a4f9956b997184eec5a3.png?compress=1&resize=1200x900&vertical=top" alt="">
+                        <p class="header-cart__msg--hollow">Chưa có sản phẩm</p>
                     </div>
                 </button>
 
@@ -92,7 +93,7 @@
                 <h2 class="content--title">
                     <i class="fa fa-unlock-alt" aria-hidden="true"></i> Pre-Order | Hàng giới hạn
                 </h2>
-                <a class="see--more" href="">Xem Tất Cả</a>
+                <a class="see--more" href="">Xem Tất Cả <i class='bx bx-chevron-right' ></i></a>
                 <ul class="slider__products mtb">
                     <li class="slider__product">
                         <a class="slider__product-link" href="">
@@ -278,7 +279,7 @@
                     <div class="content-product">
 
                         <h2 class="content--title">Danh sách sản phẩm</h2>
-                        <a class="see--more" href="">Xem Tất Cả</a>
+                        <a class="see--more" href="">Xem Tất Cả <i class='bx bx-chevron-right' ></i></a>
 
                         <!-- produc all -->
                         <ul id="product-all" class="content-product__all row">
@@ -1059,7 +1060,7 @@
                 </li>
                 <li class="chat--mobie nav-mobie__item">
                     <a class="nav-mobie__link">
-                        <i class='bx bx-message-alt-detail'></i> Chat
+                        <i class='bx bx-message-alt-detail'></i> Liên Hệ
                         <span class="nav-mobie__mess">0</span>
                     </a>
                 </li>

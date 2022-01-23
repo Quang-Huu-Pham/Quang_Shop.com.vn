@@ -116,6 +116,7 @@ hr {
     float: right;
     line-height: 48px;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 .see--more:hover {
