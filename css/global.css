@@ -90,10 +90,6 @@ hr {
     border: 1px solid #ccc;
 }
 
-.tx-white {
-    color: #fff;
-}
-
 .btn--primary {
     background-color: #1fabec;
     color: #fff;
@@ -131,11 +127,19 @@ hr {
     display: inline-block;
 }
 
+.modal-mess,
+.modal {
+    position: fixed;
+    z-index: 5;
+}
+
 @keyframes slipDown {
     from {
-        transform: translateY(-30%);
+        opacity: 0;
+        transform: translateY(-100%);
     }
     to {
+        opacity: 1;
         transform: translateY(0);
     }
 }

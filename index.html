@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="./css/global.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="./css/podShop.css">
+    <link rel="stylesheet" type="text/css" href="./css/responsive.css">
     <title>Quang.com.vn</title>
 </head>
 
@@ -45,7 +46,7 @@
                     </div>
                 </button>
 
-                <a href="/my_project/face_page/mypage.html" class="header__sign">
+                <a class="header__sign">
                     <i class="header__sign-icon fa fa-user-circle-o" aria-hidden="true"></i>
                     <span class="header__sign-link">Đăng Nhập</span>
                 </a>
@@ -255,7 +256,7 @@
                                     <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
                                 </a>
                             </li>
-                            <li class="content-nav__item">
+                            <li class="content-nav__item" onclick="openProduct(event, 'product-coats')">
                                 <a class="content-nav__product" href="">Áo Khoác
                                     <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
                                 </a>
@@ -973,6 +974,10 @@
                                 </a>
                             </li>
                         </ul>
+
+                        <ul id="product-coats" class="content-product__all row" style="display: none">
+                            <span>Hiện tại là hết cmn áo khoác rồi</span>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -982,23 +987,23 @@
 
         <div class="footer">
             <div class="container">
-                <div class="row about-us tx-white mtb">
+                <div class="row about-us mtb">
                     <div class="col">
                         <h5 class="footer__title">VỀ CHÚNG TÔI</h5>
                         <p class="footer__desc">Castles là nền tảng Thương mại điện tử hỗ trợ những nhà sáng tạo và phát triển nội dung kết nối với cộng đồng người hâm mộ thông qua việc bán merchandise và phát triển việc kinh doanh cá nhân một cách chuyên nghiệp.</p>
 
                         <span class="footer__contact mtb">
-                            <i class="fa fa-envelope-o" aria-hidden="true"></i>Email: 
-                            <a class="tx-white" href="">pquangts61@gmail.com</a>
+                            <i class="footer__contact-icon fa fa-envelope-o" aria-hidden="true"></i>Email: 
+                            <a class="footer__contact-link" href="">pquangts61@gmail.com</a>
                         </span>
                     </div>
 
-                    <div class="col about">
+                    <div class="col footer__about">
                         <h5 class="footer__title">BÁN HÀNG TRÊN CASTLES</h5>
-                        <ul>
-                            <li class="footer__item"><a class="tx-white" href="">Features</a></li>
-                            <li class="footer__item"><a class="tx-white" href="">FAQ</a></li>
-                            <li class="footer__item"><a class="tx-white" href="">Giới thiệu</a></li>
+                        <ul class="footer__about-list">
+                            <li class="footer__about-item"><a class="footer__about-link" href="">Features</a></li>
+                            <li class="footer__about-item"><a class="footer__about-link" href="">FAQ</a></li>
+                            <li class="footer__about-item"><a class="footer__about-link" href="">Giới thiệu</a></li>
                         </ul>
                     </div>
 
@@ -1009,8 +1014,8 @@
             </div>
         </div>
 
-        <div class="footer__ncp">
-            <p class="footer__no-copy">Copyright © 2020 Goodies Ltd. All rights reserved.</p>
+        <div class="no-copy">
+            <span class="no-copy__desc">Copyright © 2020 Goodies Ltd. All rights reserved.</span>
         </div>
 
         <a href="#on-top" id="up-top">
@@ -1038,6 +1043,7 @@
         <span class="filter" onclick="openNavMobie()">
             <i class='bx bx-right-arrow'></i>
         </span>
+
         <div class="nav-mobie" onclick="closeNavMobie()">
             <ul class="nav-mobie__list">
                 <a id="js-close-nav" onclick="closeNavMobie()"><i class="nav-mobie__icon fa fa-times" aria-hidden="true"></i></a>
@@ -1064,10 +1070,47 @@
                         <span class="nav-mobie__mess">0</span>
                     </a>
                 </li>
+                <li class="nav-mobie__item">
+                    <a class="nav-mobie__link" href=""><i class='bx bxs-brightness'></i> Cài Đặt</a>
+                </li>
             </ul>
         </div>
     </div>
 
+    <div class="modal">
+        <div class="container">
+            <i class='modal__back bx bx-left-arrow-alt'></i>
+            <h1 class="modal__heading">LOGIN</h1>
+            <div class="modal-form">
+                <label for="user" class="modal-form__ingredient">Email:</label>
+                <input type="text" id="user" class="input modal-form__input" placeholder="Email hoặc Số điện thoại">
+
+                <label for="pass" class="modal-form__ingredient">Mật khẩu:</label>
+                <input type="text" id="pass" class="input modal-form__input" placeholder="Mật khẩu">
+
+                <input type="checkbox" id="check" class="modal-form__check">
+                <label for="check">Ghi nhớ mật khẩu</label>
+
+                <input type="submit" class="btn btn--primary modal__btn--form" value="LOGIN">
+                <a href="" class="modal-form__forget">Quên mật khẩu</a>
+            </div>
+
+            <div class="modal-social">
+                <a href="" class="modal-social__link">
+                    <img src="./img/fb.png" alt="">
+                </a>
+                <a href="" class="modal-social__link">
+                    <img src="./img/goole.svg.png" alt="">
+                </a>
+                <a href="" class="modal-social__link">
+                    <img src="./img/apple.png" alt="">
+                </a>
+            </div>
+            <span class="modal__create">Bạn chưa có tài khoản?
+                <a class="modal__create-link" href="">Tạo tài khoản</a>
+            </span>
+        </div>
+    </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
