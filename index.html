@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
     <link rel="stylesheet" type="text/css" href="./css/global.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="../library/grid-system/grid.css">
     <link rel="stylesheet" type="text/css" href="./css/podShop.css">
     <link rel="stylesheet" type="text/css" href="./css/responsive.css">
     <title>Quang.com.vn</title>
@@ -18,7 +19,7 @@
     <div class="main">
         <!-- header -->
         <header class="header">
-            <div class="container row">
+            <div class="container flex-container">
                 <a class="header__name" href="">Castles</a>
 
                 <div class="header__center">
@@ -55,30 +56,34 @@
 
         <!-- banner -->
         <div id="on-top" class="banner">
-            <div class="container">
-                <div class="intro">
-                    <img class="intro__img" src="./poster.jpg" alt="">
+            <div class="grid wide intro">
+                <img class="intro__img" src="./poster.jpg" alt="">
 
-                    <div class="row">
-                        <div class="col">
-                            <i class="intro__icon fa fa-bolt" aria-hidden="true"></i>
-                            <div class="intro__desc">
+                <div class="row">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="intro__item">
+                            <i class="intro__item-icon fa fa-bolt" aria-hidden="true"></i>
+                            <div class="intro__item-desc">
                                 <h4 class="intro__desc-title">Hỗ trợ ship COD toàn quốc</h4>
                                 <p class="intro__desc-commit">Thanh toán khi nhận hàng</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <i class="intro__icon fa fa-refresh" aria-hidden="true"></i>
-                            <div class="intro__desc">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="intro__item">
+                            <i class="intro__item-icon fa fa-refresh" aria-hidden="true"></i>
+                            <div class="intro__item-desc">
                                 <h4 class="intro__desc-title">Cam kết chất lượng</h4>
                                 <p class="intro__desc-commit">Bảo hành 1:1 nếu có lỗi sản xuất</p>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="col">
-                            <i class="intro__icon fa fa-lock" aria-hidden="true"></i>
-                            <div class="intro__desc">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="intro__item">
+                            <i class="intro__item-icon fa fa-lock" aria-hidden="true"></i>
+                            <div class="intro__item-desc">
                                 <h4 class="intro__desc-title">Phiên bản giới hạn</h4>
                                 <p class="intro__desc-commit">Sản phẩm độc quyền của Quang</p>
                             </div>
@@ -230,784 +235,937 @@
             </div>
         </div>
 
-        <!-- content -->
         <div class="container">
             <img class="content-product__banner" src="./img/banner.png" alt="">
         </div>
+
+        <!-- content -->
         <main class="content">
-            <div class="container">
-                <div class="row">
-                    <!-- content navigation -->
-                    <div class="content-nav">
-                        <h2 class="content-nav__category">Danh Mục</h2>
-                        <ul class="content-nav__list mtb">
-                            <li class="content-nav__item" onclick="openProduct(event, 'product-hoodie')">
-                                <a class="content-nav__product">Hoodie
+            <div class="grid wide">
+                <div class="row background">
+                    <!-- content category -->
+                    <div class="col l-2 m-0 c-0">
+                        <div class="content-nav">
+                            <h2 class="content-nav__title">Danh Mục</h2>
+                            <ul class="content-nav__list mtb">
+                                <li class="content-nav__item" onclick="openProduct(event, 'product-hoodie')">
+                                    <a class="content-nav__product">Hoodie
+                                        <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="content-nav__item" onclick="openProduct(event, 'product-tshirt')">
+                                    <a class="content-nav__product">T-Shirt
+                                        <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="content-nav__item" onclick="openProduct(event, 'product-sweater')">
+                                    <a class="content-nav__product">Áo Sweater
+                                        <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="content-nav__item" onclick="openProduct(event, 'product-coats')">
+                                    <a class="content-nav__product" href="">Áo Khoác
+                                        <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                                <li class="content-nav__item">
+                                    <a class="content-nav__product" href="">Sơ Mi
+                                        <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <hr><br>
+                            <div class="content-nav__item">
+                                <a class="content-nav__product" href="">
+                                    <i class="bx bx-heart"></i> Yêu Thích
                                     <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
                                 </a>
-                            </li>
-                            <li class="content-nav__item" onclick="openProduct(event, 'product-tshirt')">
-                                <a class="content-nav__product">T-Shirt
-                                    <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="content-nav__item" onclick="openProduct(event, 'product-sweater')">
-                                <a class="content-nav__product">Áo Sweater
-                                    <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="content-nav__item" onclick="openProduct(event, 'product-coats')">
-                                <a class="content-nav__product" href="">Áo Khoác
-                                    <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                            <li class="content-nav__item">
-                                <a class="content-nav__product" href="">Sơ Mi
-                                    <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
-                                </a>
-                            </li>
-                        </ul>
-                        <hr><br>
-                        <div class="content-nav__item">
-                            <a class="content-nav__product" href="">
-                                <i class="bx bx-heart"></i> Yêu Thích
-                                <i class="content-nav__icon fa fa-chevron-right" aria-hidden="true"></i>
-                            </a>
+                            </div>
                         </div>
                     </div>
 
                     <!-- main content -->
-                    <div class="content-product">
+                    <div class="col l-10 m-12 c-12">
+                        <div class="content-product">
+                            <h2 class="content--title">Danh sách sản phẩm</h2>
+                            <a class="see--more" href="">Xem Tất Cả <i class='bx bx-chevron-right'></i></a>
 
-                        <h2 class="content--title">Danh sách sản phẩm</h2>
-                        <a class="see--more" href="">Xem Tất Cả <i class='bx bx-chevron-right' ></i></a>
+                            <!-- produc all -->
+                            <ul id="product-all" class="row content-product__all">
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater15.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/bomber2.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                        <div class="content-product__item--over">Hết Hàng</div>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt15.webp" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie15.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/coats1.png" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                        <div class="content-product__item--over">Hết Hàng</div>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/coats2.webp" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater16.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt16.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt17.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater17.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater18.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater19.png" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater19.png" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater19.png" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater19.png" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
 
-                        <!-- produc all -->
-                        <ul id="product-all" class="content-product__all row">
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater15.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                            <!-- hoodie -->
+                            <ul id="product-hoodie" class="row content-product__all" style="display: none">
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie3.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie4.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/bomber2.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie5.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie6.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                                <div class="content-product__item--over">Hết Hàng</div>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt15.webp" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie7.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie8.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie15.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie9.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie10.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                        <div class="content-product__item--over">Hết Hàng</div>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/coats1.png" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie11.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie12.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                                <div class="content-product__item--over">Hết Hàng</div>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/coats2.webp" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie13.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/hoodie14.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater16.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt16.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt17.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater17.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater18.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater19.png" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
 
-                        <!-- hoodie -->
-                        <ul id="product-hoodie" class="content-product__all row" style="display: none">
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie3.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                            <!-- T-shirt -->
+                            <ul id="product-tshirt" class="row content-product__all" style="display: none">
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt3.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt4.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie4.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt5.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt6.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie5.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt7.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt8.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie6.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt9.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt10.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                        <div class="content-product__item--over">Hết Hàng</div>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie7.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt11.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt12.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie8.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt13.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/t-shirt14.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie9.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie10.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                                <div class="content-product__item--over">Hết Hàng</div>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie11.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie12.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie13.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/hoodie14.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
 
-                        <!-- T-shirt -->
-                        <ul id="product-tshirt" class="content-product__all row" style="display: none">
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt3.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                            <!-- sweater -->
+                            <ul id="product-sweater" class="row content-product__all" style="display: none">
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater3.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater4.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt4.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater5.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater6.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt5.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater7.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater8.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt6.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater9.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater10.jfif" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
+                                        <div class="content-product__item--over">Hết Hàng</div>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt7.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater11.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater12.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt8.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater13.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
+                                </li>
+                                <li class="col l-2-4 m-3 c-6 mtb">
+                                    <div class="content-product__item">
+                                        <a href="#" class="content-product__link">
+                                            <div class="content-product__heading">
+                                                <img class="content-product__img" src="./img/sweater14.jpg" alt="">
+                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='content-product__cart bx bxs-cart-alt'></i>
+                                            </div>
+                                            <div class="slider__product-info">
+                                                <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
+                                                <span class="content-product__quantity">số lượng: 28</span>
+                                                <span class="price price--reduction">130.000đ</span>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt9.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt10.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                                <div class="content-product__item--over">Hết Hàng</div>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt11.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt12.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt13.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/t-shirt14.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
+                                </li>
+                            </ul>
 
-                        <!-- sweater -->
-                        <ul id="product-sweater" class="content-product__all row" style="display: none">
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater3.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater4.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater5.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater6.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater7.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater8.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater9.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater10.jfif" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                                <div class="content-product__item--over">Hết Hàng</div>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater11.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater12.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater13.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="content-product__item col col-4 col-2 mtb">
-                                <a href="#" class="content-product__link">
-                                    <div class="content-product__heading">
-                                        <img class="content-product__img" src="./img/sweater14.jpg" alt="">
-                                        <i class='content-product__favorite bx bxs-heart'></i>
-                                        <i class='content-product__cart bx bxs-cart-alt'></i>
-                                    </div>
-                                    <div class="slider__product-info">
-                                        <p class="content-product__name">Áo Hoodie Over Size siêu giảm giá ok abc xyz yihjfhjkjhkjgkjbjhgh</p>
-                                        <span class="content-product__quantity">số lượng: 28</span>
-                                        <span class="price price--reduction">130.000đ</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-
-                        <ul id="product-coats" class="content-product__all row" style="display: none">
-                            <span>Hiện tại là hết cmn áo khoác rồi</span>
-                        </ul>
+                            <ul id="product-coats" class="row content-product__all" style="display: none">
+                                <span>Hiện tại là hết cmn áo khoác rồi</span>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
 
 
-
         <div class="footer">
-            <div class="container">
-                <div class="row about-us mtb">
-                    <div class="col">
-                        <h5 class="footer__title">VỀ CHÚNG TÔI</h5>
-                        <p class="footer__desc">Castles là nền tảng Thương mại điện tử hỗ trợ những nhà sáng tạo và phát triển nội dung kết nối với cộng đồng người hâm mộ thông qua việc bán merchandise và phát triển việc kinh doanh cá nhân một cách chuyên nghiệp.</p>
+            <div class="grid wide">
+                <div class="row mtb">
+                    <div class="col l-4 m-4 c-12">
+                        <div class="footer__introduction">
+                            <h5 class="footer__title">VỀ CHÚNG TÔI</h5>
+                            <p class="footer__desc">Castles là nền tảng Thương mại điện tử hỗ trợ những nhà sáng tạo và phát triển nội dung kết nối với cộng đồng người hâm mộ thông qua việc bán merchandise và phát triển việc kinh doanh cá nhân một cách chuyên nghiệp.</p>
 
-                        <span class="footer__contact mtb">
-                            <i class="footer__contact-icon fa fa-envelope-o" aria-hidden="true"></i>Email: 
-                            <a class="footer__contact-link" href="">pquangts61@gmail.com</a>
-                        </span>
+                            <span class="footer__contact mtb">
+                                <i class="footer__contact-icon fa fa-envelope-o" aria-hidden="true"></i>Email: 
+                                <a class="footer__contact-link" href="">pquangts61@gmail.com</a>
+                            </span>
+                        </div>
                     </div>
 
-                    <div class="col footer__about">
-                        <h5 class="footer__title">BÁN HÀNG TRÊN CASTLES</h5>
-                        <ul class="footer__about-list">
-                            <li class="footer__about-item"><a class="footer__about-link" href="">Features</a></li>
-                            <li class="footer__about-item"><a class="footer__about-link" href="">FAQ</a></li>
-                            <li class="footer__about-item"><a class="footer__about-link" href="">Giới thiệu</a></li>
-                        </ul>
+                    <div class="col l-4 m-4 c-12">
+                        <div class="footer__benefit">
+                            <h5 class="footer__title">BÁN HÀNG TRÊN CASTLES</h5>
+                            <ul class="footer__about-list">
+                                <li class="footer__about-item"><a class="footer__about-link" href="">Features</a></li>
+                                <li class="footer__about-item"><a class="footer__about-link" href="">FAQ</a></li>
+                                <li class="footer__about-item"><a class="footer__about-link" href="">Giới thiệu</a></li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <h3 class="footer__logo">Castles</h3>
+                    <div class="col l-4 m-4 c-12">
+                        <h3 class="footer__logo">Castles</h3>
+                    </div>
                 </div>
 
                 <img src="https://deo.shopeemobile.com/shopee/shopee-pcmall-live-sg/assets/4bdefde103e8aa245cd17511adde9f89.png" alt="">
@@ -1041,12 +1199,12 @@
 
 
         <span class="filter" onclick="openNavMobie()">
-            <i class='bx bx-right-arrow'></i>
+            <i class='bx bx-menu'></i>
         </span>
 
         <div class="nav-mobie" onclick="closeNavMobie()">
             <ul class="nav-mobie__list">
-                <a id="js-close-nav" onclick="closeNavMobie()"><i class="nav-mobie__icon fa fa-times" aria-hidden="true"></i></a>
+                <a id="js-close-nav" onclick="closeNavMobie()"><i class="nav-mobie__icon bx bx-x"></i></a>
                 <li class="nav-mobie__item" onclick="openProduct(event, 'product-hoodie')">
                     <a class="nav-mobie__link" href="#product-hoodie">Áo Hoodie</a>
                 </li>

@@ -5,9 +5,6 @@
 }
 
 @media (min-width: 720px) and (max-width:1023px) {
-    .content-nav {
-        display: none;
-    }
     .footer__logo {
         font-size: 5rem;
     }
@@ -17,9 +14,6 @@
 }
 
 @media (max-width: 720px) {
-    .col-2 {
-        width: calc(100% / 2 - var(--gap));
-    }
     .mt {
         margin-top: 20px !important;
     }
@@ -71,14 +65,15 @@
     .banner {
         margin-top: 45px;
     }
-    .intro__icon {
-        font-size: 18px;
+    .intro__item-icon {
+        display: none;
     }
     .intro__desc-title {
-        font-size: 1.2rem;
+        font-size: 1.6rem;
+        margin-top: 12px;
     }
     .intro__desc-commit {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         line-height: 10px;
     }
     .price {
@@ -99,9 +94,6 @@
     .fa-unlock-alt {
         font-size: 2rem;
         margin-right: 0;
-    }
-    .content-product__all {
-        margin-left: -5px;
     }
     .content-product__item {
         min-height: 200px;
@@ -124,12 +116,12 @@
     .content-product__img {
         height: 166.56px;
     }
-    .footer .row {
-        flex-direction: column;
+    .footer__introduction,
+    .footer__benefit {
+        text-align: center;
     }
-    .footer .col {
-        width: auto;
-        margin-bottom: 40px;
+    .footer__benefit {
+        margin-top: 20px;
     }
     #up-top {
         bottom: 5px;
@@ -138,5 +130,8 @@
     }
     .filter {
         display: block;
+    }
+    .nav-mobie__list {
+        width: 100%;
     }
 }
