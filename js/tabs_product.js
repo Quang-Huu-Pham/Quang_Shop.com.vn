@@ -1,14 +1,21 @@
+var prevScrollpos = window.pageYOffset;
+
 var signIn = document.querySelector(".header__sign");
 var modalLogin = document.querySelector(".modal");
 var closeSign = document.querySelector(".modal__back");
+
+var hearts = document.querySelectorAll(".heart");
+var notFavorited = document.querySelector(".heart--not-favorite");
+var favorited = document.querySelector(".heart--favorite");
+
 var upTop = document.getElementById("up-top");
-var prevScrollpos = window.pageYOffset;
 var navMobie = document.querySelector(".nav-mobie");
 var navMobieContainer = document.querySelector(".nav-mobie__list");
 var btnChat = document.querySelector(".box-mess");
 var modalMessage = document.querySelector(".modal-mess");
 var closeMessage = document.querySelector(".modal-mess__close");
 var btnChatMobie = document.querySelector(".chat--mobie");
+
 
 signIn.addEventListener('click', function() {
     modalLogin.style.display = "flex";
@@ -32,7 +39,7 @@ function openProduct(evt, product) {
     evt.currentTarget.className += " active";
 }
 
-// // event scroll
+// event scroll
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
@@ -55,12 +62,26 @@ function openNavMobie() {
 
 function closeNavMobie() {
     navMobie.style.display = "none";
-    // navMobie.style.animation ="turnLeft 1s ease";
 }
 
 navMobieContainer.addEventListener('click', function(event) {
     event.stopPropagation();
 });
+
+// event favorite
+notFavorited.addEventListener('click', function() {
+        for (var i = 0; i < hearts.length; i++) {
+            if (hearts[i].classList.contains('heart--not-favorite')) {
+                notFavorited.classList.add('hiden');
+            } else {
+                favorited.classList.remove('hiden');
+            }
+        }
+    })
+    // favorited.addEventListener('click', function() {
+    //     favorited.classList.add('hiden');
+    //     notFavorited.classList.remove('hiden');
+    // })
 
 // chat mess
 btnChat.addEventListener('click', function() {

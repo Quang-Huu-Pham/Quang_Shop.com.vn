@@ -10,39 +10,6 @@ html {
     line-height: 18px;
     font-size: 62.5%;
     scroll-behavior: smooth;
-    background-color: var(--fa-color);
-}
-
-.main {
-    position: relative;
-    max-width: 1347px;
-}
-
-.row.background {
-    background-color: white;
-    border-radius: 10px;
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--gap));
-}
-
-.mt {
-    margin-top: 40px !important;
-}
-
-.mtb {
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.container {
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 90%;
 }
 
 li {
@@ -68,6 +35,42 @@ hr {
     width: 100%;
     height: 0.5px;
     background-color: #26263d;
+}
+
+.main {
+    position: relative;
+    max-width: 1347px;
+}
+
+.row.background {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.hiden {
+    display: none;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--gap));
+}
+
+.mt {
+    margin-top: 40px !important;
+}
+
+.mtb {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 90%;
 }
 
 .btn {

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css">
     <link rel="stylesheet" type="text/css" href="./css/global.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
-    <link rel="stylesheet" href="../library/grid-system/grid.css">
+    <link rel="stylesheet" href="./library/grid-system/grid.css">
     <link rel="stylesheet" type="text/css" href="./css/podShop.css">
     <link rel="stylesheet" type="text/css" href="./css/responsive.css">
     <title>Quang.com.vn</title>
@@ -27,14 +27,26 @@
                         <input type="text" placeholder="Tìm Kiếm Sản Phẩm" class="input">
                         <button class="btn btn--primary btn--rounded"><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div>
-                    <div class="header__nav">
-                        <a href="" class="header__nav-category">Hoodie</a>
-                        <a href="" class="header__nav-category">Nhẫn</a>
-                        <a href="" class="header__nav-category">Đèn Led</a>
-                        <a href="" class="header__nav-category">Kem Tẩy Trắng</a>
-                        <a href="" class="header__nav-category">Bình Giữ Nhiệt</a>
-                        <a href="" class="header__nav-category">Túi</a>
-                    </div>
+                    <ul class="header__suggest hide-on-mobie">
+                        <li class="header__suggest-category">
+                            <a href="" class="header__suggest-link">Hoodie</a>
+                        </li>
+                        <li class="header__suggest-category">
+                            <a href="" class="header__suggest-link">Nhẫn</a>
+                        </li>
+                        <li class="header__suggest-category">
+                            <a href="" class="header__suggest-link">Đèn Led</a>
+                        </li>
+                        <li class="header__suggest-category">
+                            <a href="" class="header__suggest-link">Kem Tẩy Trắng</a>
+                        </li>
+                        <li class="header__suggest-category">
+                            <a href="" class="header__suggest-link">Bình Giữ Nhiệt</a>
+                        </li>
+                        <li class="header__suggest-category">
+                            <a href="" class="header__suggest-link">Túi</a>
+                        </li>
+                    </ul>
                 </div>
 
                 <button class="btn btn--cart">
@@ -49,7 +61,7 @@
 
                 <a class="header__sign">
                     <i class="header__sign-icon fa fa-user-circle-o" aria-hidden="true"></i>
-                    <span class="header__sign-link">Đăng Nhập</span>
+                    <span class="header__sign-link hide-on-mobile-tablet">Đăng Nhập</span>
                 </a>
             </div>
         </header>
@@ -294,10 +306,11 @@
                             <ul id="product-all" class="row content-product__all">
                                 <li class="col l-2-4 m-3 c-6 mtb">
                                     <div class="content-product__item">
-                                        <a href="#" class="content-product__link">
+                                        <a class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater15.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -313,7 +326,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/bomber2.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -330,7 +344,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt15.webp" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -346,7 +361,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie15.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -362,7 +378,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/coats1.png" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -379,7 +396,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/coats2.webp" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -395,7 +413,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater16.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -411,7 +430,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt16.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -427,7 +447,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt17.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -443,7 +464,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater17.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -459,7 +481,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater18.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -475,7 +498,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater19.png" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -491,7 +515,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater19.png" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -507,7 +532,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater19.png" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -523,7 +549,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater19.png" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -543,7 +570,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie3.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -559,7 +587,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie4.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -575,7 +604,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie5.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -591,7 +621,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie6.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -607,7 +638,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie7.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -623,7 +655,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie8.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -639,7 +672,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie9.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -655,7 +689,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie10.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -672,7 +707,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie11.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -688,7 +724,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie12.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -704,7 +741,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie13.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -720,7 +758,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/hoodie14.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -740,7 +779,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt3.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -756,7 +796,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt4.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -772,7 +813,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt5.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -788,7 +830,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt6.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -804,7 +847,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt7.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -820,7 +864,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt8.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -836,7 +881,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt9.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -852,7 +898,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt10.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -869,7 +916,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt11.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -885,7 +933,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt12.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -901,7 +950,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt13.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -917,7 +967,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/t-shirt14.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -937,7 +988,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater3.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -953,7 +1005,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater4.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -969,7 +1022,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater5.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -985,7 +1039,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater6.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1001,7 +1056,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater7.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1017,7 +1073,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater8.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1033,7 +1090,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater9.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1049,7 +1107,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater10.jfif" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1066,7 +1125,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater11.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1082,7 +1142,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater12.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1098,7 +1159,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater13.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1114,7 +1176,8 @@
                                         <a href="#" class="content-product__link">
                                             <div class="content-product__heading">
                                                 <img class="content-product__img" src="./img/sweater14.jpg" alt="">
-                                                <i class='content-product__favorite bx bxs-heart'></i>
+                                                <i class='heart heart--not-favorite bx bx-heart'></i>
+                                                <i class='heart heart--favorite hiden bx bxs-heart'></i>
                                                 <i class='content-product__cart bx bxs-cart-alt'></i>
                                             </div>
                                             <div class="slider__product-info">
@@ -1179,7 +1242,7 @@
         <a href="#on-top" id="up-top">
             <i class='bx bx-chevron-up'></i>
         </a>
-        <div class="box-mess">
+        <div class="box-mess hide-on-mobie">
             <img src="./img/mess.svg.png" alt="">
         </div>
         <div class="modal-mess">
@@ -1220,7 +1283,7 @@
                 <br>
                 <hr><br>
                 <li class="nav-mobie__item">
-                    <a class="nav-mobie__link" href=""><i class='bx bx-heart-circle'></i> Yêu Thích</a>
+                    <a class="nav-mobie__link" href=""><i class=not--favorite'bx bx-heart-circle'></i> Yêu Thích</a>
                 </li>
                 <li class="chat--mobie nav-mobie__item">
                     <a class="nav-mobie__link">
@@ -1244,7 +1307,7 @@
                 <input type="text" id="user" class="input modal-form__input" placeholder="Email hoặc Số điện thoại">
 
                 <label for="pass" class="modal-form__ingredient">Mật khẩu:</label>
-                <input type="text" id="pass" class="input modal-form__input" placeholder="Mật khẩu">
+                <input type="password" id="pass" class="input modal-form__input" placeholder="Mật khẩu">
 
                 <input type="checkbox" id="check" class="modal-form__check">
                 <label for="check">Ghi nhớ mật khẩu</label>

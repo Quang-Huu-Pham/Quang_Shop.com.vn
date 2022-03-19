@@ -1,6 +1,11 @@
-@media (min-width: 1023px) {
-    .nav-mobie {
+@media (min-width: 1023px) {}
+
+@media (max-width: 1023px) {
+    .hide-on-mobile-tablet {
         display: none;
+    }
+    .filter {
+        display: block;
     }
 }
 
@@ -8,12 +13,12 @@
     .footer__logo {
         font-size: 5rem;
     }
-    .filter {
-        display: block;
-    }
 }
 
 @media (max-width: 720px) {
+    .hide-on-mobie {
+        display: none;
+    }
     .mt {
         margin-top: 20px !important;
     }
@@ -40,13 +45,6 @@
     .input {
         padding: 6px 10px;
         border-radius: 20px;
-    }
-    .content-nav,
-    .header__sign-link,
-    .box-mess,
-    .header__nav,
-    .about {
-        display: none;
     }
     .header-cart__quantity {
         top: -3px;
@@ -127,9 +125,6 @@
         bottom: 5px;
         right: 5px;
         font-size: 4rem;
-    }
-    .filter {
-        display: block;
     }
     .nav-mobie__list {
         width: 100%;
