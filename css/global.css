@@ -39,7 +39,7 @@ hr {
 
 .main {
     position: relative;
-    max-width: 1347px;
+    width: 100%;
 }
 
 .row.background {
@@ -70,7 +70,7 @@ hr {
 .container {
     margin: 0 auto;
     max-width: 1200px;
-    width: 90%;
+    width: 100%;
 }
 
 .btn {
