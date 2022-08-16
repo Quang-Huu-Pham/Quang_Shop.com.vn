@@ -596,6 +596,7 @@
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     transition: all 0.25s ease;
+    z-index: 99;
 }
 
 .filter {
@@ -628,7 +629,7 @@
 .nav-mobie__list {
     position: relative;
     background-color: #ffffff;
-    width: 60%;
+    width: 30%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -667,7 +668,7 @@
 }
 
 .nav-mobie__link {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     display: block;
 }
 
@@ -677,6 +678,7 @@
     padding: 0 8px;
     border-radius: 20px;
     text-align: center;
+    color: #fff;
 }
 
 .box-mess {
@@ -691,8 +693,8 @@
     display: none;
     bottom: 10px;
     left: 10px;
-    width: 328px;
-    height: 455px;
+    width: 310px;
+    height: 415px;
     background-color: var(--fa-color);
     border-radius: 10px;
     overflow: hidden;
@@ -726,8 +728,8 @@
 .modal-mess__content {
     background-color: #ebf0fe;
     text-align: center;
-    height: 370px;
-    padding: 0 8px;
+    height: 78%;
+    padding: 16px 8px 0;
 }
 
 .modal-mess__avt {

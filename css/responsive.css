@@ -14,6 +14,9 @@
 }
 
 @media (max-width: 720px) {
+    .row{
+        margin: 0;
+    }
     .hide-on-mobie {
         display: none;
     }
@@ -27,10 +30,17 @@
     .btn--rounded {
         border-radius: 20px;
     }
+    .header{
+        max-width: 412px;
+        width: 100%;
+    }
     .header__name {
         font-size: 1.8rem;
-        color: #e8e8ff;
+        color: #1e1e1e;
         line-height: 30px;
+    }
+    .flex-container{
+        justify-content: space-evenly;
     }
     .header__name::after {
         top: 0;
@@ -39,6 +49,7 @@
     }
     .header__center {
         margin: 0 6px 0 15px;
+        max-width: 200px;
     }
     .input {
         padding: 6px 10px;
@@ -80,9 +91,19 @@
     }
     .content {
         margin-top: 18px;
+        padding-inline: 8px;
+    }
+    .slick-prev{
+        left: 0;
+    }
+    .slick-next{
+        right: 0;
     }
     .content-product {
         margin: 0;
+    }
+    .content-product__all::-webkit-scrollbar {
+        display: none;
     }
     .content--title {
         font-size: 1.6rem;
